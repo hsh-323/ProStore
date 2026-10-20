@@ -1,0 +1,93 @@
+/* ProStore homepage refinement — additive overrides, kept separate from legacy theme. */
+:root {
+  --ps-accent: #ef4056;
+  --ps-ink: #232933;
+  --ps-muted: #626a73;
+  --ps-surface: #ffffff;
+  --ps-page: #f4f5f7;
+  --ps-radius: 16px;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--ps-page); color: var(--ps-ink); }
+img { max-width: 100%; }
+a { transition: color .18s ease, opacity .18s ease; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--ps-accent);
+  outline-offset: 3px;
+}
+header { z-index: 100; }
+.searchBox input, .searchBox input[type="text"], .searchBox input[type="search"] {
+  min-height: 44px;
+  border-radius: 10px;
+}
+.Promos-Discount, .hotSection, .brandSection, .advertismentFull, .adertismentHalf {
+  overflow: hidden;
+}
+.Promos-Discount, .hotSection, .brandSection, .advertismentFull, .adertismentHalf {
+  border-radius: var(--ps-radius);
+}
+.Promos-Discount > .sec-promos,
+.Promos-Discount > .sec-discount,
+.hotSection, .itm-hot-slider, .brandSection {
+  box-shadow: 0 2px 12px rgba(25, 35, 50, .045);
+}
+.Promos-Discount > .sec-promos,
+.Promos-Discount > .sec-discount { border-radius: var(--ps-radius); }
+.Promos-Discount > .sec-promos > .promos-header,
+.Promos-Discount > .sec-discount > .header > .right {
+  background: #343b48;
+}
+.Promos-Discount > .sec-discount > .body { min-width: 0; }
+.slider-amazing, .slider-amazing-sm, .sec-promos-slider, .hotProducts,
+.brandSection, .selected-news-slider { min-width: 0; }
+.lst-amazing, .itm-hot-slider { border-radius: 12px; }
+.hotSection { background: #f0f1f3; }
+.hotSection > .hotHeader { align-items: center; }
+.brandSection { padding-top: 12px; padding-bottom: 12px; }
+.brand-img > a > img { object-fit: contain; }
+.advertismentFull > img, .adertismentHalf > img { object-fit: cover; }
+@media (max-width: 1024px) {
+  .Promos-Discount { margin-left: 1em; margin-right: 1em; gap: 12px; }
+  .hotSection, .brandSection, .advertismentFull, .adertismentHalf {
+    margin-left: 1em; margin-right: 1em;
+  }
+  .adertismentHalf { gap: 12px; }
+}
+@media (max-width: 767px) {
+  body { font-size: 14px; }
+  .Promos-Discount {
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+  }
+  .Promos-Discount > .sec-promos,
+  .Promos-Discount > .sec-discount {
+    width: 100%;
+    margin-top: 0;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  .Promos-Discount > .sec-discount > .body { display: block; }
+  .Promos-Discount > .sec-discount > .body > .slider-amazing { display: none; }
+  .Promos-Discount > .sec-discount > .body > .slider-amazing-sm { display: flex; min-width: 0; }
+  .hotSection, .brandSection, .advertismentFull, .adertismentHalf {
+    margin: 10px;
+    border-radius: 12px;
+  }
+  .hotSection > .hotHeader {
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+  .hotSection > .hotBody { padding: 0 10px 10px; }
+  .brandSection { padding: 12px; height: auto; }
+  .brand-img > a > img { width: 88px; }
+  .adertismentHalf { flex-direction: column; padding: 10px; }
+  .adertismentHalf > img { width: 100%; }
+  .advertismentFull { padding: 10px; }
+  .advertismentFull > img { border-radius: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
