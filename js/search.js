@@ -11,15 +11,11 @@ function hideMenuParameter(){
     $('.sm-parameter').css("right", "-270px");
 }
 function toggleMenuSort(){
-    $('.sec-mnu-Order').toggleClass('d-flex');
-    $('.sec-mnu-Order').toggleClass('d-none');
-    document.addEventListener("click", function(e) {
-        if (e.target.closest(".sortMenu") ) {
-            return;
-        }
-        $('.sec-mnu-Order').removeClass('d-flex');
-        $('.sec-mnu-Order').addClass('d-none');
-    });
+    const menu = document.querySelector('.sec-mnu-Order');
+    if (!menu) return;
+    const isOpen = menu.classList.contains('d-flex');
+    menu.classList.toggle('d-flex', !isOpen);
+    menu.classList.toggle('d-none', isOpen);
 }
 function toggleItemParameter(o,strId){
     $(strId).toggleClass('d-flex');
@@ -65,9 +61,24 @@ $(document).ready(function () {
             }
         });
     });
-    const advertisSlider = new Swiper ('.advertisSlider', {
-        speed: 400,
-        spaceBetween: 10,
-        autoplay:true
+    // Respect reduced-motion preferences and do not initialize a missing slider.
+    const sliderElement = document.querySelector('.advertisSlider');
+    if (sliderElement && typeof Swiper !== 'undefined') {
+        const prefersReducedMotion = window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        new Swiper(sliderElement, {
+            speed: prefersReducedMotion ? 0 : 400,
+            spaceBetween: 10,
+            autoplay: !prefersReducedMotion
+        });
+    }
+
+    // Register once instead of adding another document listener on every menu toggle.
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.sortMenu')) return;
+        document.querySelectorAll('.sec-mnu-Order.d-flex').forEach(function (menu) {
+            menu.classList.remove('d-flex');
+            menu.classList.add('d-none');
+        });
     });
 });
