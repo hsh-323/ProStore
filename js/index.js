@@ -1,8 +1,10 @@
 $(document).ready(function () {
+    // Respect the visitor's reduced-motion preference for autoplaying carousels.
+    const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const advertisSlider = new Swiper ('.advertisSlider', {
         speed: 400,
         spaceBetween: 10,
-        autoplay:true
+        autoplay: !prefersReducedMotion
     });
     const brandSlider = new Swiper('.brandSection', {
         slidesPerView : 'auto',
@@ -30,7 +32,7 @@ $(document).ready(function () {
     const promosSlider = new Swiper('.sec-promos-slider', {
         slidesPerView : 'auto',
         loop:false,
-        autoplay: true,
+        autoplay: !prefersReducedMotion,
         breakpoints: {
             320:{
                 slidesPerView: 1,
@@ -85,7 +87,7 @@ $(document).ready(function () {
     const sliderAmazing = new Swiper(".slider-amazing", {
         slidesPerView: 1,
         spaceBetween: 15,
-        autoplay:true,
+        autoplay: !prefersReducedMotion,
         thumbs: {
             swiper: thumbsAmazing,
         },
@@ -93,7 +95,7 @@ $(document).ready(function () {
     const sliderAmazingSm = new Swiper(".slider-amazing-sm", {
         slidesPerView: 1,
         spaceBetween: 15,
-        autoplay:true,
+        autoplay: !prefersReducedMotion,
     });
 
     const hotProductSlider = new Swiper('.hotProducts', {
@@ -147,6 +149,6 @@ $(document).ready(function () {
                 spaceBetween: 10,
             },
         },
-        autoplay:true
+        autoplay: !prefersReducedMotion
     });
 });
