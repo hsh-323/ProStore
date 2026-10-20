@@ -1,14 +1,14 @@
 /* ProStore homepage redesign v2 — stronger hierarchy, category discovery and responsive polish. */
 @font-face {
   font-family: "IRANSansWeb";
-  src: url("../fonts/IRANSansFa/IRANSansWeb(FaNum).woff2") format("woff2");
+  src: url("../fonts/IRANSansFa/woff2/IRANSansWeb(FaNum).woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "IRANSansWeb";
-  src: url("../fonts/IRANSansFa/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
+  src: url("../fonts/IRANSansFa/woff2/IRANSansWeb(FaNum)_Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
