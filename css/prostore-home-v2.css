@@ -385,3 +385,25 @@ main{padding-bottom:24px}
   .add-mini span { font-size: 13px; }
   .price-discount { bottom: 52px; }
 }
+
+
+/* Carousel controls float at the sides of the product cards, as on a retail offer rail. */
+.product-rail .rail-controls {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: -8px;
+  right: -8px;
+  transform: translateY(-50%);
+  justify-content: space-between !important;
+  margin: 0 !important;
+  pointer-events: none;
+}
+.product-rail .rail-controls .rail-arrow {
+  pointer-events: auto;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 10%);
+}
+.product-rail .rail-track { padding-block: 3px 6px; }
+@media (max-width: 760px) {
+  .product-rail .rail-controls { left: -3px; right: -3px; }
+}
