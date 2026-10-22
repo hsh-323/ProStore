@@ -1,0 +1,45 @@
+name: Visual homepage preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "css/prostore-home-v2.css"
+      - "js/prostore-home-v2.js"
+      - ".github/workflows/visual-preview.yml"
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Chromium
+        run: npx --yes playwright install --with-deps chromium
+      - name: Start static site
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/prostore-http.log 2>&1 &
+          echo $! >/tmp/prostore-http.pid
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/index.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/prostore-http.log
+          exit 1
+      - name: Capture desktop and mobile views
+        run: |
+          mkdir -p visual-preview
+          npx --yes playwright screenshot --browser chromium --viewport-size "1440,1000" --full-page --wait-for-timeout 1200 http://127.0.0.1:8080/index.html visual-preview/prostore-desktop.png
+          npx --yes playwright screenshot --browser chromium --viewport-size "390,844" --full-page --wait-for-timeout 1200 --device "iPhone 13" http://127.0.0.1:8080/index.html visual-preview/prostore-mobile.png
+      - name: Upload rendered screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: prostore-visual-preview
+          path: visual-preview/
+          retention-days: 7
