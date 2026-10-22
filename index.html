@@ -38,7 +38,17 @@
 </header>
 
 <main>
-  <section class="hero" aria-label="پیشنهادهای ویژه">
+<section class="container quick-links" aria-label="دسترسی‌های منتخب">
+<a class="quick-link" href="#deals"><span class="quick-icon quick-red">٪</span><span class="quick-title">پیشنهاد شگفت‌انگیز</span></a>
+<a class="quick-link" href="search.html"><span class="quick-icon quick-purple">★</span><span class="quick-title">پرفروش‌ها</span></a>
+<a class="quick-link" href="search.html"><span class="quick-icon quick-blue">✦</span><span class="quick-title">تازه‌رسیده‌ها</span></a>
+<a class="quick-link" href="#brands-title"><span class="quick-icon quick-green">◇</span><span class="quick-title">برندهای محبوب</span></a>
+<a class="quick-link" href="search.html?q=سوپرمارکت"><span class="quick-icon quick-orange">🛒</span><span class="quick-title">سوپرمارکت</span></a>
+<a class="quick-link" href="search.html?q=هدیه"><span class="quick-icon quick-pink">♧</span><span class="quick-title">کارت هدیه</span></a>
+<a class="quick-link" href="search.html?q=خرید+اعتباری"><span class="quick-icon quick-teal">＋</span><span class="quick-title">خرید اعتباری</span></a>
+<a class="quick-link" href="search.html"><span class="quick-icon quick-neutral">☷</span><span class="quick-title">همه دسته‌بندی‌ها</span></a>
+</section>
+<section class="hero" aria-label="پیشنهادهای ویژه">
     <div class="hero-viewport">
       <a class="hero-slide is-active" href="search.html" aria-hidden="false"><img src="css/images/swiper13.webp" alt="پیشنهاد ویژه خرید از ProStore" fetchpriority="high"></a>
       <a class="hero-slide" href="search.html"><img src="css/images/swiper11.webp" alt="تخفیف‌های منتخب فروشگاه" loading="lazy"></a>
@@ -47,17 +57,19 @@
       <div class="hero-dots"><button class="hero-dot is-active" type="button" aria-label="نمایش بنر اول"></button><button class="hero-dot" type="button" aria-label="نمایش بنر دوم"></button><button class="hero-dot" type="button" aria-label="نمایش بنر سوم"></button></div>
     </div>
   </section>
-
-  <section class="container quick-links" aria-label="دسترسی سریع"><a class="quick-link" href="#deals"><span class="quick-icon" style="color:#de3449;background:#fff0f2">٪</span><span class="quick-title">شگفت‌انگیزها</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#fff0e8;background:#fff">📱</span><span class="quick-title">موبایل</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#eaf4ff;background:#fff">💻</span><span class="quick-title">کالای دیجیتال</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#e9f7ef;background:#fff">🏠</span><span class="quick-title">خانه و آشپزخانه</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#fff1f4;background:#fff">💄</span><span class="quick-title">زیبایی و سلامت</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#f2ecff;background:#fff">👕</span><span class="quick-title">مد و پوشاک</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#fff2df;background:#fff">🧸</span><span class="quick-title">کودک و نوزاد</span></a>
-<a class="quick-link" href="search.html"><span class="quick-icon" style="color:#e8f7f7;background:#fff">🚲</span><span class="quick-title">ورزش و سفر</span></a></section>
-
-  <section class="container" id="deals" aria-labelledby="deals-title">
+<section class="container category-shortcuts" aria-label="دسته‌بندی‌های محبوب">
+<div class="category-grid">
+<a class="category-card" href="search.html?q=موبایل"><span class="category-picture">📱</span><strong>موبایل</strong></a>
+<a class="category-card" href="search.html?q=لپ‌تاپ"><span class="category-picture">💻</span><strong>لپ‌تاپ و کامپیوتر</strong></a>
+<a class="category-card" href="search.html?q=هدفون"><span class="category-picture">🎧</span><strong>هدفون و اسپیکر</strong></a>
+<a class="category-card" href="search.html?q=تلویزیون"><span class="category-picture">📺</span><strong>صوتی و تصویری</strong></a>
+<a class="category-card" href="search.html?q=خانه"><span class="category-picture">🧺</span><strong>خانه و آشپزخانه</strong></a>
+<a class="category-card" href="search.html?q=زیبایی"><span class="category-picture">🧴</span><strong>زیبایی و سلامت</strong></a>
+<a class="category-card" href="search.html?q=پوشاک"><span class="category-picture">👟</span><strong>مد و پوشاک</strong></a>
+<a class="category-card" href="search.html?q=ابزار"><span class="category-picture">🔧</span><strong>ابزار و تجهیزات</strong></a>
+</div>
+</section>
+<section class="container" id="deals" aria-labelledby="deals-title">
     <div class="deal-shell">
       <div class="deal-content">
         <aside class="deal-intro">
@@ -161,17 +173,13 @@
     </div>
   </section>
 
-  <section class="container section" aria-labelledby="categories-title">
-    <div class="section-head"><div><h2 class="section-heading" id="categories-title">خرید بر اساس دسته‌بندی</h2><p class="section-subtitle">کالای موردنظرت را سریع‌تر پیدا کن</p></div><a class="section-more" href="search.html">مشاهده همه ←</a></div>
-    <div class="category-grid"><a class="category-card" href="search.html?q=%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84"><span class="category-picture">📱</span><strong>موبایل</strong></a>
-<a class="category-card" href="search.html?q=%D9%84%D9%BE%E2%80%8C%D8%AA%D8%A7%D9%BE%20%D9%88%20%DA%A9%D8%A7%D9%85%D9%BE%DB%8C%D9%88%D8%AA%D8%B1"><span class="category-picture">💻</span><strong>لپ‌تاپ و کامپیوتر</strong></a>
-<a class="category-card" href="search.html?q=%D9%87%D8%AF%D9%81%D9%88%D9%86%20%D9%88%20%D8%A7%D8%B3%D9%BE%DB%8C%DA%A9%D8%B1"><span class="category-picture">🎧</span><strong>هدفون و اسپیکر</strong></a>
-<a class="category-card" href="search.html?q=%D8%B5%D9%88%D8%AA%DB%8C%20%D9%88%20%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%DB%8C"><span class="category-picture">📺</span><strong>صوتی و تصویری</strong></a>
-<a class="category-card" href="search.html?q=%D9%84%D9%88%D8%A7%D8%B2%D9%85%20%D8%AE%D8%A7%D9%86%D9%87"><span class="category-picture">🧺</span><strong>لوازم خانه</strong></a>
-<a class="category-card" href="search.html?q=%D8%B2%DB%8C%D8%A8%D8%A7%DB%8C%DB%8C%20%D9%88%20%D8%B3%D9%84%D8%A7%D9%85%D8%AA"><span class="category-picture">🧴</span><strong>زیبایی و سلامت</strong></a>
-<a class="category-card" href="search.html?q=%D9%85%D8%AF%20%D9%88%20%D9%BE%D9%88%D8%B4%D8%A7%DA%A9"><span class="category-picture">👟</span><strong>مد و پوشاک</strong></a>
-<a class="category-card" href="search.html?q=%D8%A7%D8%A8%D8%B2%D8%A7%D8%B1%20%D9%88%20%D8%AA%D8%AC%D9%87%DB%8C%D8%B2%D8%A7%D8%AA"><span class="category-picture">🔧</span><strong>ابزار و تجهیزات</strong></a></div>
-  </section>
+  
+
+  
+
+  
+
+  
 
   <div class="container ad-banners" aria-label="بنرهای فروشگاه">
     <a class="ad-banner" href="search.html"><img src="css/images/adv11.webp" alt="پیشنهادهای منتخب ProStore" loading="lazy"></a>
