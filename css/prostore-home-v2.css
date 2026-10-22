@@ -624,3 +624,47 @@ main{padding-bottom:24px}
   max-width: none;
   margin-inline: auto;
 }
+
+
+/* Final top-fold tune after a same-viewport screenshot comparison. */
+.header-main > .brand .brand-mark {
+  display: grid !important;
+  flex: 0 0 34px;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #ef4056;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+.header-main > .brand .brand-name {
+  font-size: 34px;
+  letter-spacing: -.8px;
+}
+.header-main > .search-form { margin-right: 19px; }
+.quick-links {
+  grid-template-columns: repeat(10, minmax(0,1fr));
+  padding-top: 32px;
+  padding-bottom: 30px;
+}
+.quick-icon { font-size: 23px; }
+.quick-black { background: #101014 !important; color: #fff !important; }
+.quick-gold { background: #d7a832 !important; color: #fff !important; }
+.quick-yellow { background: #f3c329 !important; color: #fff !important; }
+#deals > .deal-shell { margin-top: 0; }
+@media (max-width: 1180px) {
+  .quick-links { grid-template-columns: repeat(5, minmax(0,1fr)); padding-block: 22px; }
+  .header-main > .brand .brand-name { font-size: 30px; }
+  .header-main > .search-form { margin-right: 0; }
+}
+@media (max-width: 760px) {
+  .header-main > .brand .brand-mark { display: none !important; }
+  .header-main > .brand .brand-name { font-size: 21px; }
+  .quick-links {
+    padding: 12px 10px 14px;
+    grid-template-columns: none;
+  }
+  #deals > .deal-shell { margin-top: 0; }
+}
