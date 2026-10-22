@@ -6,6 +6,7 @@ on:
     paths:
       - "index.html"
       - "css/prostore-home-v2.css"
+      - "css/prostore-home-polish.css"
       - "js/prostore-home-v2.js"
       - ".github/workflows/visual-preview.yml"
   workflow_dispatch:
