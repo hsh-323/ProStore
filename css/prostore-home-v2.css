@@ -458,3 +458,161 @@ main{padding-bottom:24px}
     line-height: 1.6;
   }
 }
+
+
+/* Match the live Digikala desktop first fold: compact two-level header, full hero, services row, red deal rail. */
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 68px;
+  padding-block: 8px;
+}
+.header-main > .brand { flex: 0 0 auto; }
+.header-main > .search-form {
+  flex: 0 1 500px;
+  width: min(500px, 42vw);
+  max-width: 500px;
+  margin: 0;
+}
+.header-main > .header-actions {
+  flex: 0 0 auto;
+  margin-right: auto;
+}
+.brand-name {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.nav-wrap { border-top: 1px solid #ededf0; }
+.primary-nav { min-height: 40px; }
+.hero-viewport {
+  aspect-ratio: 3.6 / 1;
+  min-height: 320px;
+  max-height: 410px;
+}
+.quick-links {
+  padding: 18px max(18px, calc((100% - 1304px) / 2)) 18px;
+  gap: 9px;
+}
+.quick-icon {
+  width: 56px;
+  height: 56px;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  color: #fff !important;
+}
+.quick-red { background: #ef4056 !important; }
+.quick-purple { background: #2855c5 !important; }
+.quick-blue { background: #1877df !important; }
+.quick-green { background: #10a56e !important; }
+.quick-orange { background: #f47a24 !important; }
+.quick-pink { background: #cf1757 !important; }
+.quick-teal { background: #009c9c !important; }
+.quick-neutral { background: #eeeeef !important; color: #575b64 !important; }
+.quick-title { max-width: 110px; font-size: 10px; color: #343944; }
+.deal-shell {
+  width: min(1304px, calc(100% - 40px));
+  max-width: 1304px;
+  margin: 14px auto 20px;
+  padding: 20px 0;
+  border-radius: 18px;
+  background: #ef4056;
+  box-shadow: none;
+}
+.deal-content {
+  min-height: 280px;
+  grid-template-columns: 165px minmax(0,1fr);
+  gap: 8px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.deal-intro {
+  align-self: stretch;
+  background: transparent;
+  color: #fff;
+  padding: 10px 6px;
+}
+.deal-label { color: #fff; font-size: 17px; }
+.deal-label .spark { color: #fff; }
+.deal-intro p { color: #fff; font-size: 10px; }
+.deal-countdown { color: #fff; }
+.deal-countdown span { background: #fff; color: #ef4056; border: 0; }
+.deal-intro .deal-button {
+  border: 0;
+  color: #ef4056;
+  background: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.product-rail .rail-track {
+  gap: 3px;
+  padding: 0;
+  background: #ef4056;
+}
+.product-card {
+  flex-basis: 166px;
+  border: 0;
+  border-left: 3px solid #ef4056;
+  border-radius: 0;
+  background: #fff;
+  padding: 9px 8px 10px;
+  box-shadow: none;
+}
+.product-card:hover {
+  transform: none;
+  border-color: #ef4056;
+  box-shadow: inset 0 0 0 1px #f4a0ad;
+}
+.product-card .product-image { height: 145px; margin-bottom: 8px; }
+.product-card .product-title { min-height: 42px; font-size: 10px; }
+.product-card .product-brand { display: none; }
+.price-current { font-size: 12px; }
+.price-old { font-size: 9px; }
+.price-discount { bottom: 11px; }
+.add-mini { background: #fff; }
+.category-shortcuts {
+  margin: 18px auto 14px;
+  padding: 20px;
+  width: min(1304px, calc(100% - 40px));
+  border: 1px solid #eceef1;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 1180px) {
+  .header-main > .search-form { width: min(460px, 38vw); flex-basis: 460px; }
+  .deal-shell { width: calc(100% - 36px); }
+  .deal-content { grid-template-columns: 150px minmax(0,1fr); }
+}
+@media (max-width: 760px) {
+  .header-main { display: none; }
+  .hero-viewport { aspect-ratio: 1.85 / 1; min-height: 170px; max-height: 280px; }
+  .quick-links { padding: 12px 10px 14px; gap: 10px; }
+  .quick-icon { width: 48px; height: 48px; }
+  .quick-title { max-width: 68px; font-size: 9px; }
+  .deal-shell {
+    width: auto;
+    margin: 12px 10px 16px;
+    padding: 7px 0;
+    border-radius: 14px;
+  }
+  .deal-content { grid-template-columns: 1fr; gap: 6px; min-height: 0; }
+  .deal-intro {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 4px 8px;
+    padding: 6px 12px;
+    justify-items: start;
+  }
+  .deal-label { font-size: 12px; }
+  .deal-intro .deal-button { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .product-rail .rail-track { gap: 3px; padding: 0; }
+  .product-card { flex-basis: 154px; padding: 8px; }
+  .product-card .product-image { height: 112px; }
+  .category-shortcuts {
+    width: auto;
+    margin: 14px 10px;
+    padding: 13px 10px;
+  }
+}
