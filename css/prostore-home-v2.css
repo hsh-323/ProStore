@@ -668,3 +668,15 @@ main{padding-bottom:24px}
   }
   #deals > .deal-shell { margin-top: 0; }
 }
+
+
+/* Align the header and services-to-deals boundary to the live first-fold geometry. */
+.header-main > .brand .brand-name { line-height: 1; }
+.quick-links { padding-bottom: 34px; }
+@media (max-width: 1180px) {
+  .quick-links { padding-bottom: 22px; }
+}
+@media (max-width: 760px) {
+  .header-main > .brand .brand-name { line-height: 1; }
+  .quick-links { padding-bottom: 14px; }
+}
