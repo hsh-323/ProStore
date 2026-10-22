@@ -407,3 +407,54 @@ main{padding-bottom:24px}
 @media (max-width: 760px) {
   .product-rail .rail-controls { left: -3px; right: -3px; }
 }
+
+
+/* Screenshot findings: only show the compact search row on mobile; mobile shortcuts scroll horizontally. */
+.mobile-search { display: none; }
+@media (max-width: 760px) {
+  .mobile-search { display: flex; }
+  .quick-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 12px 12px 14px;
+  }
+  .quick-links::-webkit-scrollbar { display: none; }
+  .quick-link {
+    flex: 0 0 68px;
+    min-width: 68px;
+    scroll-snap-align: start;
+  }
+  .quick-icon { width: 48px; height: 48px; }
+  .category-shortcuts .category-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 13px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 2px 6px;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  .category-shortcuts .category-grid::-webkit-scrollbar { display: none; }
+  .category-shortcuts .category-card {
+    flex: 0 0 66px;
+    min-width: 66px;
+    scroll-snap-align: start;
+  }
+  .category-shortcuts .category-picture {
+    width: 49px;
+    height: 49px;
+    font-size: 21px;
+  }
+  .category-shortcuts .category-card strong {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+}
