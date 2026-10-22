@@ -43,16 +43,16 @@ $(document).ready(function () {
                 spaceBetween: 15,
             },
             768: {
-                slidesPerView: 3,
-                spaceBetween: 15,
+                slidesPerView: 2,
+                spaceBetween: 12,
             },
             1024: {
-                slidesPerView: 4,
-                spaceBetween: 15,
+                slidesPerView: 3,
+                spaceBetween: 14,
             },
             1440: {
-                slidesPerView: 1,
-                spaceBetween: 15,
+                slidesPerView: 3,
+                spaceBetween: 16,
             },
         }
     });
