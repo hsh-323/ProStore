@@ -31,5 +31,43 @@
 .deal-shell{border-radius:16px;padding:8px}
 .deal-content{min-height:304px;border-radius:10px}
 .product-card{flex-basis:184px;border-radius:9px}
-@media(max-width:1180px){.category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.quick-links{grid-template-columns:repeat(5,minmax(0,1fr))}.category-shortcuts{width:calc(100% - 24px)}}
-@media(max-width:760px){.category-shortcuts{width:calc(100% - 20px);padding:14px 12px}.category-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 6px}.category-picture{width:68px;height:68px}.quick-links{gap:12px;padding-block:14px 18px}.quick-icon{width:58px;height:58px}.quick-title{font-size:9px}.header-main{min-height:68px}.hero-viewport{aspect-ratio:1.85/1}}
+
+/* Final visual pass: current Digikala desktop rhythm. */
+.site-header{box-shadow:0 1px 6px rgb(0 0 0 / 4%)}
+.header-main{grid-template-columns:168px minmax(300px,1fr) auto;min-height:72px;padding-block:9px;gap:18px}
+.brand-mark{width:34px;height:34px;border-radius:10px;font-size:22px}
+.brand-name{font-size:22px}
+.search-form{height:44px;background:#f3f3f5;border-radius:8px}
+.header-actions{gap:7px}
+.action-link{min-height:40px;padding-inline:10px;border-color:#e9eaed;border-radius:8px}
+.nav-wrap{border-top-color:#f0f0f2}
+.primary-nav{min-height:39px;gap:22px}
+.nav-link{height:39px;font-size:10px}
+.nav-location{font-size:9px}
+.hero-viewport{aspect-ratio:4.18/1;max-height:405px;min-height:230px}
+.hero-arrow{width:34px;height:34px;font-size:19px}
+.hero-arrow.prev{right:18px}.hero-arrow.next{left:18px}
+.hero-dots{bottom:10px}
+.quick-links{width:100%;max-width:none;margin:0;padding:18px max(18px,calc((100% - 1480px)/2)) 20px;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;background:#fff;border-bottom:1px solid #ededf0}
+.quick-link{gap:7px}
+.quick-icon{width:62px;height:62px;border-radius:50%;box-shadow:0 1px 5px rgb(0 0 0 / 4%);font-size:24px}
+.quick-title{font-size:10px;white-space:nowrap}
+#deals{margin-top:14px}
+.deal-shell{padding:7px;border-radius:14px}
+.deal-content{grid-template-columns:180px minmax(0,1fr);min-height:302px;padding:7px;border-radius:10px;gap:7px}
+.deal-intro{padding:12px 9px;gap:10px;border-radius:8px}
+.deal-label{font-size:17px}.deal-label .spark{font-size:32px}
+.product-card{flex-basis:182px;padding:10px;border-radius:8px}
+.product-card .product-image{height:132px}
+.product-title{font-size:10px;line-height:1.8}
+.ad-banners{gap:14px;margin-top:20px}.ad-banner{border-radius:12px}
+.category-shortcuts{margin-top:20px;margin-bottom:14px;border-radius:14px;padding:18px 18px 16px}
+.category-grid{gap:20px 8px}
+.category-picture{width:78px;height:78px;border-radius:50%}
+.section{margin-top:20px;padding:18px 18px 16px;border-radius:14px}
+.section-head{margin-bottom:16px}.section-heading{font-size:16px}
+.brand-grid{border-radius:10px}.brand-item{min-height:86px}
+.bestseller-grid{border-radius:10px}
+.bestseller{grid-template-columns:30px 70px minmax(0,1fr);padding:11px 9px}.bestseller img{width:70px;height:70px}
+@media(max-width:1180px){.quick-links{grid-template-columns:repeat(5,minmax(0,1fr));row-gap:16px}.category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.category-shortcuts{width:calc(100% - 24px)}}
+@media(max-width:760px){.header-main{min-height:68px;padding-block:8px;grid-template-columns:1fr;gap:0}.quick-links{display:flex;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;scroll-snap-type:x mandatory;gap:10px;padding:12px 12px 14px}.quick-links::-webkit-scrollbar{display:none}.quick-link{flex:0 0 68px;min-width:68px;scroll-snap-align:start}.quick-icon{width:52px;height:52px;font-size:20px}.quick-title{font-size:9px;line-height:1.6;white-space:normal}.hero-viewport{aspect-ratio:1.88/1;min-height:170px;max-height:280px}#deals{margin-top:12px}.deal-content{grid-template-columns:1fr;min-height:0}.product-card{flex-basis:154px}.product-card .product-image{height:112px}.category-shortcuts{width:calc(100% - 20px);margin:12px auto;padding:14px 10px}.category-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 4px}.category-picture{width:58px;height:58px}.section{margin-top:14px;padding:14px 12px 12px;border-radius:12px}.brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bestseller-grid{grid-template-columns:1fr}.bestseller,.bestseller:nth-child(4n),.bestseller:nth-last-child(-n+4){border-left:0;border-bottom:1px solid #f0f0f2}.bestseller:last-child{border-bottom:0}}
