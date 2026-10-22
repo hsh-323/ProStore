@@ -36,7 +36,7 @@ jobs:
         run: |
           mkdir -p visual-preview
           npx --yes playwright screenshot --browser chromium --viewport-size "1440,1000" --full-page --wait-for-timeout 1200 http://127.0.0.1:8080/index.html visual-preview/prostore-desktop.png
-          npx --yes playwright screenshot --browser chromium --viewport-size "390,844" --full-page --wait-for-timeout 1200 --device "iPhone 13" http://127.0.0.1:8080/index.html visual-preview/prostore-mobile.png
+          npx --yes playwright screenshot --browser chromium --viewport-size "390,844" --full-page --wait-for-timeout 1200 http://127.0.0.1:8080/index.html visual-preview/prostore-mobile.png
       - name: Upload rendered screenshots
         uses: actions/upload-artifact@v4
         with:
