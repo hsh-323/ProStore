@@ -7,6 +7,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -17,6 +20,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Apply homepage polish stylesheet
+        if: github.event_name == 'push' && github.event.head_commit.message != 'Apply homepage polish [generated]'
+        shell: bash
+        run: |
+          set -e
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          link='<link rel="stylesheet" href="css/prostore-home-polish.css?v=1.0">'
+          if link not in s:
+              s=s.replace('</head>', '  '+link+'\n</head>', 1)
+              p.write_text(s, encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Apply homepage polish [generated]"
+          git push
       - name: Check JavaScript syntax
         shell: bash
         run: |
