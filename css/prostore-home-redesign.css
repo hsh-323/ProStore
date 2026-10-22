@@ -894,3 +894,31 @@ header {
 @media (prefers-reduced-motion: reduce) {
   .ps-story-orbit, .Promos-Discount .itm-product { transition: none !important; }
 }
+
+
+/* v6: keep the white campaign wordmark legible on the offer header */
+.Promos-Discount > .sec-promos > .promos-header {
+  background: linear-gradient(110deg, #ef4056 0%, #df284a 100%) !important;
+  color: #fff !important;
+  border-bottom: 0 !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+.Promos-Discount > .sec-promos > .promos-header > img {
+  filter: none;
+}
+.Promos-Discount > .sec-promos > .promos-header > i {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgb(255 255 255 / 48%);
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(255 255 255 / 10%);
+}
+@media (max-width: 768px) {
+  .Promos-Discount > .sec-promos > .promos-header {
+    border-radius: 10px 10px 0 0 !important;
+  }
+}
