@@ -616,3 +616,11 @@ main{padding-bottom:24px}
     padding: 13px 10px;
   }
 }
+
+
+/* The offer rail itself uses the same centered content width as the current Digikala homepage. */
+#deals {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+}
